@@ -4,8 +4,9 @@ import "gorm.io/gorm"
 
 type User struct {
 	gorm.Model
-	Name  string
-	Pass  int
+	ID    string `json:"id "`
+	Email string `gorm:"unique"`
+	Pass  int    `json:"password"`
 	Chats []Chat `gorm:"foreignKey:UserID"`
 }
 
