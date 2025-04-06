@@ -1,18 +1,26 @@
 package main
 
 import (
-	"log"
-	"restapi/model"
+	"restapi/handlers"
+	"restapi/middleware"
 
-	"gorm.io/driver/sqlite"
-	"gorm.io/gorm"
+	"restapi/database"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	db, err := gorm.Open(sqlite.Open("restApi.db"), &gorm.Config{})
-	if err != nil {
-		log.Fatal("Ошибка подкллючения к БД")
-	}
-	db.AutoMigrate(&model.User{})
+	database.InitDatabase()
+	r := gin.Default()
+	r.GET("/debug-token", handlers.DebugTokenHandler)
 
+	r.GET("/check-token", handlers.CheckTokenHandler)
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{"message": "pong"})
+	})
+	r.GET("/me", middleware.JWTAuthMiddleware(), handlers.MeHandler)
+	r.POST("/register", handlers.Register)
+	r.POST("/login", handlers.Login)
+	r.POST("/refresh", handlers.Refresh)
+	r.Run(":8080")
 }
