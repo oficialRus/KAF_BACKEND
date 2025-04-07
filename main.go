@@ -22,5 +22,8 @@ func main() {
 	r.POST("/register", handlers.Register)
 	r.POST("/login", handlers.Login)
 	r.POST("/refresh", handlers.Refresh)
+	r.POST("/chats", middleware.JWTAuthMiddleware(), handlers.CreateChat)
+	r.GET("/chats", middleware.JWTAuthMiddleware(), handlers.GetChats)
+
 	r.Run(":8080")
 }

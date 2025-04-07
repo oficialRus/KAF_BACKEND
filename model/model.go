@@ -13,7 +13,8 @@ type User struct {
 
 type Chat struct {
 	gorm.Model
-	UserID   int
+	UserID   uint
+	Title    string
 	Messages []Message `gorm:"foreignKey:ChatID"`
 }
 

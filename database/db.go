@@ -16,6 +16,6 @@ func InitDatabase() {
 	if err != nil {
 		log.Fatal("Ошибка подкллючения к БД")
 	}
-	DB.AutoMigrate(&model.User{})
+	DB.AutoMigrate(&model.User{}, &model.Chat{}, &model.Message{})
 
 }
