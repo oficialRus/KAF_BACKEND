@@ -1,0 +1,148 @@
+type: collection.insomnia.rest/5.0
+name: Go Chat API
+meta:
+  id: wrk_657ca1ea114e4b3fab0b0e641f6dd520
+  created: 1741942658062
+  modified: 1741942658062
+collection:
+  - url: http://localhost:8080/register
+    name: Регистрация
+    meta:
+      id: req_a757ca22b9de45b185e4af998c76a4cc
+      created: 1742298013356
+      modified: 1744275967529
+      isPrivate: false
+      sortKey: -1742298013356
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"name": "Roma",
+          "email": "roma.doe@example.com",
+          "password": "securepassword"
+        }
+    headers:
+      - id: pair_8691232fffbc432a8712f3b9517e660f
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/login
+    name: Авторизация
+    meta:
+      id: req_57ef440057704e04be2e0b627d00f07f
+      created: 1744017090220
+      modified: 1744275733566
+      isPrivate: false
+      sortKey: -1744017090220
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"name": "Roma",
+          "email": "roma.doe@example.com",
+          "password": "securepassword"
+        	
+        }
+    headers:
+      - id: pair_ac6900f64aaf49d88bc9d0fda085a9c6
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MDE4MjI1LCJpYXQiOjE3NDQwMTczMjV9.rC4Yj3Ma01k_Nte9PhLNXHKs3IKKFT2wfUP0GgSVd6w
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/chats
+    name: Создать чат
+    meta:
+      id: req_7cb9f3faa42d4cbe947b6d89f5103d8d
+      created: 1744017170350
+      modified: 1744275855735
+      isPrivate: false
+      sortKey: -1744017170350
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"name": "Roma",
+          "email": "roma.doe@example.com",
+          "password": "securepassword",
+        	"Title":"Это 1 чат"
+        	
+        }
+    headers:
+      - id: pair_2a840e5f5fc94c99b82b7205e06e95cf
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0Mjc2NjgwLCJpYXQiOjE3NDQyNzU3ODB9.Av66CAeBmgNTexxKvkwK-QDf1iS882hLJGdbN57tO1k
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/chats
+    name: Получить все чаты
+    meta:
+      id: req_35471e65d6f44805af93ef8c5ef6772a
+      created: 1744017487773
+      modified: 1744275983735
+      isPrivate: false
+      sortKey: -1744017130285
+    method: GET
+    body:
+      mimeType: application/json
+      text: |
+        {
+        	"name": "Roma",
+          "email": "roma.doe@example.com",
+          "password": "securepassword",
+        	"Title":"Это 1 чат"
+        	
+        	
+        	
+        }
+    headers:
+      - id: pair_2a840e5f5fc94c99b82b7205e06e95cf
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0Mjc2NjgwLCJpYXQiOjE3NDQyNzU3ODB9.Av66CAeBmgNTexxKvkwK-QDf1iS882hLJGdbN57tO1k
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_37179b357c65cf0609e15db374e50c5ea638fe65
+    created: 1741942658098
+    modified: 1741942658098
+environments:
+  name: Base Environment
+  meta:
+    id: env_37179b357c65cf0609e15db374e50c5ea638fe65
+    created: 1741942658065
+    modified: 1741942658065
+    isPrivate: false
