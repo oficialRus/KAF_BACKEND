@@ -1,9 +1,12 @@
-ДОКУМЕНТАЦИЯ по работе с Docker:
+ Go Chat API
 
-1.Клонировать репозиторий
+ Стек
+- Golang
+- Gin
+- Gorm (SQLite)
+- JWT
 
-2.Собрать Docker-образ: 
-" docker build -t chat-go-app ."
+ Запуск (через Docker)
 
-3.Запустить контейнер: 
-" docker run -d -p 8080:8080 --name chat-container chat-go-app"
+docker build -t restapi-app .
+docker run -p 8080:8080 restapi-app
