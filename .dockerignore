@@ -1,0 +1,24 @@
+# Бинарник
+/app
+
+# База данных
+restApi.db
+
+# Git
+.git
+.gitignore
+
+# IDE / Editor
+.vscode
+.idea
+
+# Кэш и временные файлы
+*.log
+*.tmp
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Insomnia API коллекции
+Insomnia_*.yaml
