@@ -20,7 +20,7 @@ type Chat struct {
 
 type Message struct {
 	gorm.Model
-	ChatID     int
+	ChatID     uint
 	Content    string
 	Role       string
 	SearchType string
