@@ -25,6 +25,8 @@ func main() {
 	r.POST("/chats", middleware.JWTAuthMiddleware(), handlers.CreateChat)
 	r.GET("/chats", middleware.JWTAuthMiddleware(), handlers.GetChats)
 	r.POST("/chats/:id/messages", middleware.JWTAuthMiddleware(), handlers.CreateMessage)
+	r.GET("/chats/:id/messages", middleware.JWTAuthMiddleware(), handlers.GetMessagesByChatID)
+	r.DELETE("/chats/:id", middleware.JWTAuthMiddleware(), handlers.DeleteChat)
 
 	r.Run(":8080")
 }

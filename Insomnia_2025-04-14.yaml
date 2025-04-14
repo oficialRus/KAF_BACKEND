@@ -1,0 +1,254 @@
+type: collection.insomnia.rest/5.0
+name: Go Chat API
+meta:
+  id: wrk_657ca1ea114e4b3fab0b0e641f6dd520
+  created: 1741942658062
+  modified: 1742321963694
+collection:
+  - url: http://localhost:8080/chats/21/messages
+    name: Получить все сообщения чата
+    meta:
+      id: req_d956c0c1a73c45319ab8520b924518e3
+      created: 1742322056720
+      modified: 1744645705128
+      isPrivate: false
+      sortKey: -1742322056720
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - id: pair_0b8d6ce51f294e1f9c87f9469f887e3b
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0NjQ2NTI2LCJpYXQiOjE3NDQ2NDU2MjZ9.vQUibyACqsPuv3rsV1IyPn40i6W0L71wtuGw5W3gyQs
+        disabled: false
+    authentication:
+      type: bearer
+      disabled: true
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/register
+    name: Регистрация
+    meta:
+      id: req_07369700cf334d4fa7cb09ce84fd33b1
+      created: 1744641868291
+      modified: 1744645605165
+      isPrivate: false
+      sortKey: -1744641868291
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "name": "Иван",
+          "email": "ivan@exampleу.com",
+          "password": "supersecurepassword"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: Bearer
+        id: pair_f5420924bbab40e7b9866f742e29961c
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/login
+    name: Авторизация
+    meta:
+      id: req_8606c9c38b034d80bf30e7a8825ec337
+      created: 1744641921767
+      modified: 1744645625785
+      isPrivate: false
+      sortKey: -1743481962505.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "name": "Иван",
+          "email": "ivan@exampleу.com",
+          "password": "supersecurepassword"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a3e56266fb3649deac495aa4909fb64c
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/chats/21/messages
+    name: Добавить сообщения в этот чат
+    meta:
+      id: req_46caf681f71e4a3d97ede4123152820b
+      created: 1744642274894
+      modified: 1744645687576
+      isPrivate: false
+      sortKey: -1742612033166.375
+    method: POST
+    body:
+      mimeType: application/json
+      text: >
+        {
+          "content": "Привет! Искусствовед Михаил Алпатов писал, что некоторый отход от действительности можно оправдать тем, что «это не к частности, героиня полотна вполне естественно воспринимается и простой русской крестьянкой, и богиней Весны.",
+          "role": "assistant",
+          "search_type": "первый"
+        }
+    headers:
+      - id: pair_0b8d6ce51f294e1f9c87f9469f887e3b
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0NjQ2NTI2LCJpYXQiOjE3NDQ2NDU2MjZ9.vQUibyACqsPuv3rsV1IyPn40i6W0L71wtuGw5W3gyQs
+        disabled: false
+    authentication:
+      type: bearer
+      disabled: true
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/chats
+    name: Создать чат
+    meta:
+      id: req_646dcccfa8f84bd69aae15f1657a4ab1
+      created: 1744642546508
+      modified: 1744645665545
+      isPrivate: false
+      sortKey: -1742902009612.75
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "title": "Мой чат с ассистентом"
+        }
+    headers:
+      - name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0NjQ2NTI2LCJpYXQiOjE3NDQ2NDU2MjZ9.vQUibyACqsPuv3rsV1IyPn40i6W0L71wtuGw5W3gyQs
+        id: pair_85791aa3d3904b9ebd5ac7dcdbfc08b9
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/chats/21
+    name: Удаление чата у пользователя
+    meta:
+      id: req_67e8def067fd4e769bdd554f8432af39
+      created: 1744643792980
+      modified: 1744645720853
+      isPrivate: false
+      sortKey: -1742322056570
+    method: DELETE
+    body:
+      mimeType: application/json
+    headers:
+      - id: pair_0b8d6ce51f294e1f9c87f9469f887e3b
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0NjQ2NTI2LCJpYXQiOjE3NDQ2NDU2MjZ9.vQUibyACqsPuv3rsV1IyPn40i6W0L71wtuGw5W3gyQs
+        disabled: false
+    authentication:
+      type: bearer
+      disabled: true
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/refresh
+    name: Обновить access токен
+    meta:
+      id: req_c6ae635fe87a49c093eedd1bf2bbb657
+      created: 1744644507255
+      modified: 1744645086843
+      isPrivate: false
+      sortKey: -1743191986059.125
+    method: POST
+    body:
+      mimeType: application/json
+      text: >
+        {
+          "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ0eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTI0OTc0NSwiaWF0IjoxNzQ0NjQ0OTQ1fQ.3vK6ass6Ec706xZW0rbav8uApRR6boIoy_ax6KuanZQ"
+        }
+    headers:
+      - id: pair_d29c3e2c2ab248228de09a15b8dd2fbe
+        name: Content-Type
+        value: application/json
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/me
+    name: Получить текущую информацию о пользователе
+    meta:
+      id: req_d87cf61dc0ae44fc86c20ad9abc9c725
+      created: 1744645237541
+      modified: 1744645651388
+      isPrivate: false
+      sortKey: -1743046997835.9375
+    method: GET
+    body:
+      mimeType: application/json
+    headers:
+      - id: pair_0b8d6ce51f294e1f9c87f9469f887e3b
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ0eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0NjQ2NTI2LCJpYXQiOjE3NDQ2NDU2MjZ9.vQUibyACqsPuv3rsV1IyPn40i6W0L71wtuGw5W3gyQs
+        disabled: false
+    authentication:
+      type: bearer
+      disabled: true
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_37179b357c65cf0609e15db374e50c5ea638fe65
+    created: 1742321964355
+    modified: 1742321964355
+environments:
+  name: Base Environment
+  meta:
+    id: env_37179b357c65cf0609e15db374e50c5ea638fe65
+    created: 1741942658065
+    modified: 1742321963692
+    isPrivate: false
