@@ -8,5 +8,5 @@
 
  Запуск (через Docker)
 
-docker build -t restapi-app .
-docker run -p 8080:8080 restapi-app
+docker build -t go-chat-api .
+docker run -p 8080:8080 go-chat-api
